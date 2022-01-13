@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konvensi Mata Uang</title>
+    <script>
+        let hasil
+        
+        function hitung() {
+            let nilai = parseInt(document.getElementById('nilai').value)
+            let jenis = document.getElementById('valas').value
+
+            if (jenis == '1') {
+                hasil = nilai * 9915
+            } else if (jenis == '2') {
+                hasil = niali * 13472
+            } else if (jenis == '3') {
+                hasil = nilai * 874
+            } else if (jenis == '4') {
+                hasil = nilai * 120
+            } else if (jenis == '5') {
+                hasil = niali * 15888
+            } else if (jenis == '6') {
+                hasil = niali * 3592
+            } else {
+                hasil = "Error"
+            }
+
+            let format = new Intl.NumberFormat('hasil')
+
+
+            document.getElementById('hasil').value = 'Rp.' + format.format(hasil);
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset style="width: 300px;">
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table border="1">
+            <tr>
+                <td style="text-align: center;">Masukan Nilai</td>
+                <td style="text-align: center;">Valas</td>
+                <td style="text-align: center;">Nilai Rupiah</td>
+            </tr>
+        
+            <tr>
+                <td><input style="height: 20px; width: 200px;" type="text" id="nilai" placeholder="Masukan Nilai"></td>
+                <td>
+                    <select style="height: 25px; width: 200px;" onchange="hitung()" name="" id="valas">
+                        <option value="" hidden>Dollar US</option>
+                        <option value="1">Dollar US</option>
+                        <option value="2">Dollar Singapura</option>
+                        <option value="3">Ringgit Malaysia</option>
+                        <option value="4">Yen Japan</option>
+                        <option value="5">Euro</option>
+                        <option value="6">Riyal Arab Saudi</option>
+                    </select>
+                </td>
+                <td><input placeholder="Hasil" style="height: 20px; width: 200px; color: rgb(15, 87, 196);" 
+                    type="text" id="hasil" disabled></td>
+            </tr>
+            
+        </table>
+    </fieldset>
+    
+</body>
+</html>

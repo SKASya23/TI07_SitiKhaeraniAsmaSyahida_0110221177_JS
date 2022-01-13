@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siti Khaerani Asma Syahida-TI07 | Pilih Gambar</title>
+</head>
+
+<body>
+    <style>
+        *{
+            background-color: rgb(83, 208, 247);
+            margin-top: auto;
+            align-items: center;
+            text-align: center;
+            border-style: solid;
+        }
+    </style>
+
+    <select name="" id="daftar" onchange="tampil()">
+        <option value=""> Hewan </option>
+        <option value="harimau sumatera">Harimau Sumatera</option>
+        <option value="penguin">Penguin</option>
+        <option value="komodo">Komodo</option>
+        <option value="panda">Panda</option>
+        <option value="owa">Owa</option>
+        <option value="bekantan">Bekantan</option>
+        <option value="anoa">Anoa</option>
+        <option value="badak">Badak</option>
+        <option value="paus biru">Paus Biru</option>
+        <option value="penyu">Penyu</option>
+    </select>
+
+    <div id="hasil"></div>
+
+    <script>
+        let daftar = document.getElementById("daftar")
+        let hasil = document.getElementById("hasil")
+
+        function tampil(){
+            switch (daftar.value) {
+                case "harimau sumatera":
+                hasil.innerHTML = '<img src="https://cdn1.katadata.co.id/media/images/temp/2021/04/18/2021_04_18-14_18_02_e9bd7308f5cf79ba304878c216660a6a.jpg" alt="">'
+                alert("Ini gambar Harimau Sumatera")
+                break;
+
+                case "penguin":
+                hasil.innerHTML = '<img src="https://img.okezone.com/content/2017/12/07/56/1826668/hilang-setengah-populasi-penguin-paling-langka-ini-terancam-punah-9rKVY7d0BK.jpg" alt="">'
+                alert("Ini gambar Penguin")
+                break;
+
+                case "komodo":
+                hasil.innerHTML = '<img src="https://img.inews.co.id/media/822/files/inews_new/2020/04/01/IMG_01042020_115809__822_x_430_piksel_.jpg" alt="">'
+                alert("Ini gambar Komodo")
+                break;
+
+                case "panda":
+                hasil.innerHTML = '<img src="https://asset.kompas.com/crops/XierJ68kR40uXuwT3oHeuN8CKaY=/0x0:780x390/780x390/data/photo/2014/04/11/1936364Ilustrasi-Panda780x390.jpg" alt="">'
+                alert("Ini gambar Panda")
+                break;
+
+                case "owa":
+                hasil.innerHTML = '<img src="http://asset-a.grid.id/crop/0x0:0x0/x/photo/2018/08/26/4103176150.jpg" alt="">'
+                alert("Ini gambar Owa")
+                break;
+
+                case "bekantan":
+                hasil.innerHTML = '<img src="https://pantaugambut.id/uploads/default/galleries/17/Bekantan_yang_habitatnya_di_lahan_gambut.png" alt="">'
+                alert("Ini gambar Bekantan")
+                break;
+
+                case "anoa":
+                hasil.innerHTML = '<img src="https://alamendah.files.wordpress.com/2010/04/anoa-dataran-rendah.jpg?w=640" alt="">'
+                alert("Ini gambar Anoa")
+                break;
+
+                case "badak":
+                hasil.innerHTML = '<img src="https://telkomradio.id/wp-content/uploads/2021/08/badak-2-300x180.jpg" alt="">'
+                alert("Ini gambar Badak")
+                break;
+
+                case "paus biru":
+                hasil.innerHTML = '<img src="https://www.greeners.co/wp-content/uploads/2015/08/Fauna_Nyaringnya_Suara_Paus_Biru.jpg" alt="">'
+                alert("Ini gambar Paus Biru")
+                break;
+
+                case "penyu":
+                hasil.innerHTML = '<img src="http://assets.kompasiana.com/items/album/2020/12/09/5c8337c70cfe7c2f18864582533096dd-5fd0a0d68ede483a31261092.png" alt="">'
+                alert("Ini gambar Penyu")
+                break;
+
+                default:
+                    hasil.innerHTML =""
+            }
+        }
+    </script>
+
+</body>
+</html>
